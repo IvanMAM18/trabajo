@@ -25,23 +25,23 @@
 
                 </div>
             </div>
-            <div class="row">
+            <div class="row" >
                 <?php for($i=0; $i<12; $i++){?>
-                <div class="col-md-4 col-sm-10 p-2 ">
-                <div class="card " style="width: 18rem;">
-                <img src="../public/img/logo.png" class="card-img-top img-fluid-1" alt="...">
-                <div class="card-body">
-                <h5 class="card-title">Titulo</h5>
-                 <h6 class="card-subtitle mb-2 text-muted">Categoria</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="row">
-                        <a href="#" class="btn btn-warning col-6" type="button" onclick="remove(this)">Eliminar</a>
-                        <a href="#" class="btn btn-danger col-6" type="button" data-bs-toggle="modal" data-bs-target="#createProductModel">Editar</a>
-                        <a href="../details.php" class="btn btn-info col-12" type="button">Detalles</a>
+                  <div class="col-md-4 col-sm-10 p-2 " >
+                    <div class="card " style="width: 18rem;">
+                      <img src="../public/img/logo.png" class="card-img-top img-fluid-1" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Titulo</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Categoria</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="row">
+                                <a href="#" class="btn btn-warning col-6" type="button" onclick="remove(this)">Eliminar</a>
+                                <a href="#" class="btn btn-danger col-6" type="button" data-bs-toggle="modal" data-bs-target="#createProductModel">Editar</a>
+                                <a href="../details.php" name='detalle' class="btn btn-info col-12" type="button">Detalles</a>
+                        </div>
+                      </div>
                     </div>
-                </div>
-                </div>
-                </div>
+                  </div>
                 <?php }?>
             </div>
         </div>
@@ -75,28 +75,28 @@
     </div>
   </div>
 </div>
-<?php include "../layouts/scripts.php"; ?>
-                  <script type="text/javascript">
-                    function remove(target){
-                      Swal.fire({
-  title: 'Are you sure?',
-  text: "You won't be able to revert this!",
-  icon: 'warning',
-  showCancelButton: true,
-  confirmButtonColor: '#3085d6',
-  cancelButtonColor: '#d33',
-  confirmButtonText: 'Yes, delete it!'
-}).then((result) => {
-  if (result.isConfirmed) {
-    Swal.fire(
-      'Deleted!',
-      'Your file has been deleted.',
-      'success'
-    )
-  }
-})
-                    }
-                  </script>
+<?php include "layouts/scripts.php"; ?>
+<script type="text/javascript">
+    function remove(target){
+      Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire(
+            'Deleted!',
+            'Your file has been deleted.',
+            'success'
+          )
+        }
+      })
+    }
+</script>
   </body>
 
 </html>
